@@ -1,9 +1,14 @@
 import { buildModule } from "@nomicfoundation/hardhat-ignition/modules";
 
 
-export default buildModule("CounterModule", (m) => {
+export default buildModule("Ethernaut", (m) => {
 
   const fallback = m.contract("Fallback");
-  return { counter };
+  const fallout = m.contract("Fallout");
+  
+  return { 
+      fallback,
+      fallout
+  };
 
 });
