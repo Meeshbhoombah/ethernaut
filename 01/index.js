@@ -1,9 +1,9 @@
 import { ethers } from "ethers";
 
-export default async function (contractAddress) {
+export default async function (providerUrl, contractAddress) {
 
   // Connect to local Hardhat node
-  const provider = new ethers.JsonRpcProvider("http://127.0.0.1:8545");
+  const provider = new ethers.JsonRpcProvider(providerUrl);
 
   // Get the first account as signer
   const accounts = await provider.listAccounts();
