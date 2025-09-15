@@ -1,14 +1,23 @@
-# Node
-node_modules
-build
-npm-debug.log
-
-# Private Variables
-.env
-
-# Mac OS
-.DS_Store
-
 # Vim
 *.sw*
 
+# Node modules
+/node_modules
+
+# Compilation output
+/dist
+
+# pnpm deploy output
+/bundle
+
+# Hardhat Build Artifacts
+/artifacts
+
+# Hardhat compilation (v2) support directory
+/cache
+
+# Typechain output
+/types
+
+# Hardhat coverage reports
+/coverage
