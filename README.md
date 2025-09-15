@@ -19,6 +19,6 @@ yarn hardhat build
 
 7. Deploy the contracts
 ```
-yarn hardhat ignition deploy ignition/modules/ethernaut
+yarn hardhat ignition deploy ignition/modules/ethernaut.ts
 ```
 
