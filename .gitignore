@@ -1,0 +1,14 @@
+# Node
+node_modules
+build
+npm-debug.log
+
+# Private Variables
+.env
+
+# Mac OS
+.DS_Store
+
+# Vim
+*.sw*
+
