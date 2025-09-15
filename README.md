@@ -13,8 +13,12 @@ Solutions to OpenZepplin's "Ethernaut" Capture-the-Flag
 4. Make the `solve` script executable
 5. Link the `solve` script
 6. Build the contracts
-7. Deploy the contracts
 ```
 yarn hardhat build
 ```
+
+7. Deploy the contracts
+```
+yarn hardhat ignition deploy ignition/modules/ethernaut
+
 
