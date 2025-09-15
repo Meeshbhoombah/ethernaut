@@ -1,17 +1,14 @@
-# ethernaut
-OpenZepplin "Ethernaut" Capture-the-Flag
+# Ethernaut
+Solutions to OpenZepplin's "Ethernaut" Capture-the-Flag
 
 ## Getting Started
 ### Prerequisites
-#### NPM
-
+#### Node
+#### Yarn
 ### Installation
-3. Make the root script (`solve.js`) executable.
-```
-chmod +x solve.js
-```
+1. Clone
+2. cd
+3. Install packages
+4. Make the `solve` script executable
+5. Link the `solve` script
 
-4. Link it to NPM. 
-```
-npm link
-```
