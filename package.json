@@ -1,0 +1,24 @@
+{
+  "name": "ethernaut",
+  "version": "1.0.0",
+  "description": "OpenZepplin \"Ethernaut\" Capture-the-Flag",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "solve": "./solve.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Meeshbhoombah/ethernaut.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Meeshbhoombah/ethernaut/issues"
+  },
+  "homepage": "https://github.com/Meeshbhoombah/ethernaut#readme"
+}
