@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/Meeshbhoombah/ethernaut#readme",
   "dependencies": {
+    "@openzeppelin/contracts": "3.4.0",
     "ethers": "^6.15.0",
     "hardhat": "^3.0.6"
   },
