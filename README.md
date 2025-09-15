@@ -5,10 +5,16 @@ Solutions to OpenZepplin's "Ethernaut" Capture-the-Flag
 ### Prerequisites
 #### Node
 #### Yarn
+
 ### Installation
 1. Clone
 2. cd
 3. Install packages
 4. Make the `solve` script executable
 5. Link the `solve` script
+6. Build the contracts
+7. Deploy the contracts
+```
+yarn hardhat build
+```
 
