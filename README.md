@@ -10,14 +10,19 @@ Solutions to OpenZepplin's "Ethernaut" Capture-the-Flag
 1. Clone
 2. cd
 3. Install packages
-4. Make the `solve` script executable
-5. Link the `solve` script
-6. Build the contracts
+4. Start a local blockchain network
+```
+yarn hardhat node
+```
+
+5. Make the `solve` script executable
+6. Link the `solve` script
+7. Build the contracts
 ```
 yarn hardhat build
 ```
 
-7. Deploy the contracts
+8. Deploy the contracts
 ```
 yarn hardhat ignition deploy ignition/modules/ethernaut.ts --network localhost
 ```
@@ -39,6 +44,11 @@ yarn hardhat build --build-profile legacy06 contracts/Fallout.sol
 ```
 
 Specify both the build profile and the contract name.
+
+#### The Deployer of Contracts
+`hardhat` uses Account #0 of the generated accounts (viewable by listing 
+accounts or when running the node with `hardhat node`.
+
 
 ## Usage
 
