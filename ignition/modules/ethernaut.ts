@@ -14,6 +14,8 @@ export default buildModule("Ethernaut", (m) => {
   // const delegate = m.deploy(delegateContract, [deployer.address]);
   // const delegation = m.contract("Delegation");
   // const delegation = m.deploy(delegationContract, [delegate.address])
+  const password = ethers.utils.formatBytes32String("password");
+  const vault = m.contract("Vault", [password]);
   
   return { 
     fallback,
@@ -22,6 +24,7 @@ export default buildModule("Ethernaut", (m) => {
     telephone,
     // delegate
     // delegation
+    vault
   };
 
 });
