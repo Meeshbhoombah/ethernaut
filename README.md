@@ -4,7 +4,7 @@ Solutions to OpenZepplin's "Ethernaut" Capture-the-Flag
 ## Getting Started
 ### Prerequisites
 #### Node
-#### Yarn
+#### NPM
 
 ### Installation
 1. Clone
@@ -14,22 +14,14 @@ Solutions to OpenZepplin's "Ethernaut" Capture-the-Flag
 ```
 npm run node
 ```
-
-5. Make the `solve` script executable
-6. Link the `solve` script
-7. Build the contracts
+5. Build the contracts
 ```
 npm run build
 ```
 
-8. Deploy the contracts
+6. Run the test suite (contains the exploits)
 ```
-npm run deploy:local
-```
-
-9. Run a level
-```
-npm run solve -- 01 <SOLUTION_CONTRACT_ADDRESS>
+npm test
 ```
 
 ### Development
