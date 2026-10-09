@@ -5,7 +5,6 @@ Solutions to OpenZepplin's "Ethernaut" Capture-the-Flag
 ### Prerequisites
 #### Node
 #### NPM
-
 ### Installation
 1. Clone
 2. cd
@@ -45,7 +44,6 @@ Specify both the build profile and the contract name.
 #### The Deployer of Contracts
 `hardhat` uses Account #0 of the generated accounts (viewable by listing 
 accounts or when running the node with `hardhat node`.
-
 
 ## Usage
 
