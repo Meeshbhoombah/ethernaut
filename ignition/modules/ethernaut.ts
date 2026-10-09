@@ -1,4 +1,5 @@
 import { buildModule } from "@nomicfoundation/hardhat-ignition/modules";
+import { ethers } from "ethers";
 
 
 export default buildModule("Ethernaut", (m) => {
@@ -15,8 +16,8 @@ export default buildModule("Ethernaut", (m) => {
   // const delegation = m.contract("Delegation");
   // const delegation = m.deploy(delegationContract, [delegate.address]);
   const force = m.contract("Force");
-  // const password = ethers.utils.formatBytes32String("password");
-  // const vault = m.contract("Vault", [password]);
+  const password = ethers.encodeBytes32String("password");
+  const vault = m.contract("Vault", [password]);
   
   return { 
     fallback,
@@ -26,6 +27,7 @@ export default buildModule("Ethernaut", (m) => {
     // delegate
     // delegation
     force,
+    password,
     vault
   };
 
