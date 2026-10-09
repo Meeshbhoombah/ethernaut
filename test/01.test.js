@@ -109,10 +109,28 @@ describe("Ethernaut Challenge 01: Fallback", () => {
       attackerAddress.toLowerCase()
     );
 
-    assert.ok((await provider.getBalance(contractAddress)) > 0n);
+    const balanceBefore = await provider.getBalance(contractAddress);
+    assert.equal(balanceBefore, ethers.parseEther("0.0002"));
 
-    await (await attackerContract.withdraw()).wait();
+    console.log("Contract:", contractAddress);
+    console.log("Owner:", await fallback.owner());
+    console.log("Withdraw function:", fallback.interface.getFunction("withdraw").format());
+    console.log("Code size:", (await provider.getCode(contractAddress)).length);
+    console.log("Balance before:", await provider.getBalance(contractAddress));
+ 
+    const tx = await attackerContract.withdraw();
+    const receipt = await tx.wait();
 
-    assert.equal(await provider.getBalance(contractAddress), 0n);
+    assert.equal(receipt.status, 1);
+
+    // Query state at the block that included the withdrawal.
+    const balanceAfter = await provider.getBalance(
+      contractAddress,
+      receipt.blockNumber
+    );
+
+    assert.equal(balanceAfter, 0n);
+
   });
+
 });
