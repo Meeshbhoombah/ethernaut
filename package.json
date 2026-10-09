@@ -5,7 +5,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "hardhat build && node --test",
     "node": "hardhat node",
     "build": "hardhat build",
     "deploy:local": "hardhat ignition deploy ignition/modules/ethernaut.ts --network localhost",
