@@ -5,7 +5,11 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "node": "hardhat node",
+    "build": "hardhat build",
+    "deploy:local": "hardhat ignition deploy ignition/modules/ethernaut.ts --network localhost",
+    "solve": "node ./solve.js"
   },
   "bin": {
     "solve": "./solve.js"
