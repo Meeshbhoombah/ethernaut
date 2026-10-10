@@ -43,6 +43,7 @@
     "@nomicfoundation/ignition-core": "^3.0.0",
     "@types/node": "^22.8.5",
     "forge-std": "foundry-rs/forge-std#v1.9.4",
+    "openzeppelin-contracts-06": "npm:@openzeppelin/contracts@^3.4.2",
     "typescript": "~5.8.0",
     "viem": "^2.30.0"
   }
