@@ -46,4 +46,26 @@ Specify both the build profile and the contract name.
 accounts or when running the node with `hardhat node`.
 
 ## Usage
+## Vulnerabilities
+### 01
+#### Classification
+Improper Access Control
+- Contract lets arbitrary caller change a privleged variable, `owner`, without 
+  requiring authorization from the current owner
+
+#### Impact
+Privilege Escalation
+- An ordinary user can obtain authority of the contract owner/invoke functions
+  restricted by `onlyOwner`, including `withdraw()`
+
+#### Cause
+Missing Authorization Invariant
+- `recieve()` function checks whether called contributed/sent ETH, fails to
+  enfource intended restriction on who may become owner
+
+Not simply vulnerable because `external` or publicly callable
+- Public entry points are normal in Solidity
+- Vulnerability = public entry point can modify privileged state w/o approprate
+  authorization rule
+
 
