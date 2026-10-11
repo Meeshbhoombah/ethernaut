@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "hardhat build && node --test",
+    "test:one": "hardhat build && node --test",
     "node": "hardhat node",
     "build": "hardhat build",
     "deploy:local": "hardhat ignition deploy ignition/modules/ethernaut.ts --network localhost",
